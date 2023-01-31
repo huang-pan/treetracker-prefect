@@ -3,7 +3,7 @@ This Git repo is a port of this Airflow DAG:
 https://github.com/Greenstand/treetracker-airflow-dags/blob/main/map/assign-new-trees-to-clusters.py
 https://dev-k8s.treetracker.org/airflow/tree?dag_id=assign_tree_to_cluster
 
-to Prefect as a means to evaulate Prefect as an orchestration tool.
+to Prefect as a means of evaluating Prefect as an orchestration tool.
 
 To get Prefect up and running:
 
