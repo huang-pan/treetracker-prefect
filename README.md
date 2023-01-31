@@ -1,7 +1,6 @@
 This Git repo is a port of this Airflow DAG:
 
 https://github.com/Greenstand/treetracker-airflow-dags/blob/main/map/assign-new-trees-to-clusters.py
-https://dev-k8s.treetracker.org/airflow/tree?dag_id=assign_tree_to_cluster
 
 to Prefect as a means of evaluating Prefect as an orchestration tool.
 
@@ -13,14 +12,15 @@ Sign up for a free Prefect Cloud account (Personal tier https://www.prefect.io/p
 
 and get invited to the treetracker-prefect-dev Workspace
 
-This workspace has all the Prefect Blocks correctly set up. Think of Prefect Blocks as Airflow Variables and Operators combined into one. For the above workspace, the Airflow Variables from https://dev-k8s.treetracker.org/airflow/variable/list/ have been ported over to Prefect. A Slack Webhook block has also been set up so that notifications of data pipeline completion can be sent to a Slack channel.
+This workspace has all the Prefect Blocks correctly set up. Think of Prefect Blocks as Airflow Variables and Operators combined into one. For the above workspace, the Airflow Variables from Greenstand's dev Airflow have been ported over to Prefect. A Slack Webhook block has also been set up so that notifications of data pipeline completion can be sent to a Slack channel.
 
 
 The instructions below are for macOS:
 
 https://docs.prefect.io/getting-started/installation/
 - Make sure you have python 3 installed
-- pip install -U prefect
+- pip3 install -U prefect
+- Create an API key in Prefect Cloud: https://docs.prefect.io/ui/cloud-getting-started/#create-an-api-key. The API key will be used in the 'prefect cloud login' command below.
 - prefect cloud login
 
 Clone this git repo and cd to the cloned repo directory. For example:
@@ -30,7 +30,7 @@ Clone this git repo and cd to the cloned repo directory. For example:
 The below instructions are for a local deployment. Your computer is used to run the Prefect Flows (similar to Airflow DAGs). The assign-tree-flow is run. It is a direct port of the assign_tree_to_cluster DAG.
 - export PYTHONPATH=${PYTHONPATH}:./:./flows:./flows/map
 - python deployment.py
-- prefect agent start -q 'assign_tree_flow_queue'
+- prefect agent start -q 'assign_tree_flow_queue' &
 - python flows/map/assign_tree_to_cluster.py
 
 You can also play around with the flow and deployment from the Prefect Cloud UI and compare it with the Airflow webserver UI. You can also schedule flow runs from the Prefect Cloud UI.
