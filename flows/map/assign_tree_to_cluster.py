@@ -1,3 +1,8 @@
+"""
+Port of 
+https://github.com/Greenstand/treetracker-airflow-dags/blob/main/map/assign-new-trees-to-clusters.py
+to Prefect
+"""
 import datetime
 import psycopg2
 from prefect import flow, task, get_run_logger

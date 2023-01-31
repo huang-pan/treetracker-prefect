@@ -1,3 +1,9 @@
+"""
+Port of 
+https://github.com/Greenstand/treetracker-airflow-dags/blob/main/lib/assign_new_trees_to_cluster.py
+to Prefect
+- print statements changed to logger.info()
+"""
 import datetime
 import psycopg2
 from prefect import get_run_logger
