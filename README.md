@@ -27,7 +27,7 @@ Clone this git repo and cd to the cloned repo directory. For example:
 
 - cd ~/Greenstand/git/treetracker-prefect
 
-The below instructions is a local deployment. Your computer is used to run the Prefect Flows (similar to Airflow DAGs). The assign-tree-flow is run. It is a direct port of the assign_tree_to_cluster DAG.
+The below instructions are for a local deployment. Your computer is used to run the Prefect Flows (similar to Airflow DAGs). The assign-tree-flow is run. It is a direct port of the assign_tree_to_cluster DAG.
 - export PYTHONPATH=${PYTHONPATH}:./:./flows:./flows/map
 - python deployment.py
 - prefect agent start -q 'assign_tree_flow_queue'
