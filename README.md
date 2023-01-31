@@ -46,10 +46,10 @@ Further things to do if we were serious about upgrading from Airflow to Prefect 
     - Create a Kubernetes deployment using Greenstand's Digital Ocean k8s (dev / prod) for Prefect agent, work queue. Prefect agents are like Airflow schedulers. Prefect work queues are like Airflow worker pods.
 	    - Set the initial deployment schedules in the deployment.py file
     - Add S3 storage for logs of flow runs
+- Create a Prefect yaml file on https://github.com/Greenstand/treetracker-infrastructure to automatically deploy dev and prod Prefect agents, work queues, and web UIs on Greenstand's dev and prod Kubernetes clusters https://discourse.prefect.io/t/deploying-prefect-agents-on-kubernetes/1298
 - Add block files for connections, variables, secrets, etc.: https://docs.prefect.io/concepts/blocks/
 	- only need to do once, can do from UI
 	- https://medium.com/the-prefect-blog/modular-data-stack-build-a-data-platform-with-prefect-dbt-and-snowflake-part-3-7c325a8b63dc
-- Create a Prefect yaml file on https://github.com/Greenstand/treetracker-infrastructure to automatically deploy dev and prod Prefect agents, work queues, and web UIs on Greenstand's dev and prod Kubernetes clusters https://discourse.prefect.io/t/deploying-prefect-agents-on-kubernetes/1298
 - Add prod workspace in Prefect Cloud, and dev / prod switches to deployment.py
 
 Airflow vs Prefect:
