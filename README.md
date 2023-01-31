@@ -25,7 +25,7 @@ https://docs.prefect.io/getting-started/installation/
 
 Clone this git repo and cd to the cloned repo directory. For example:
 
-- cd ~/Documents/Greenstand/git/treetracker-prefect
+- cd ~/Greenstand/git/treetracker-prefect
 
 The below instructions is a local deployment. Your computer is used to run the Prefect Flows (similar to Airflow DAGs). The assign-tree-flow is run. It is a direct port of the assign_tree_to_cluster DAG.
 - export PYTHONPATH=${PYTHONPATH}:./:./flows:./flows/map
