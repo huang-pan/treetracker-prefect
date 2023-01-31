@@ -36,8 +36,7 @@ The below instructions are for a local deployment. Your computer is used to run 
 You can also play around with the flow and deployment from the Prefect Cloud UI and compare it with the Airflow webserver UI. You can also schedule flow runs from the Prefect Cloud UI.
 
 
-The structure of this git repo is copied from: https://github.com/anna-geller/prefect-dataplatform
-This project is an excellent example of how you would use Prefect, dbt, and Snowflake: https://medium.com/the-prefect-blog/modular-data-stack-build-a-data-platform-with-prefect-dbt-and-snowflake-9e8ef6a56503
+The structure of this git repo is copied from: https://github.com/anna-geller/prefect-dataplatform: an excellent example of how you would use Prefect, dbt, and Snowflake: https://medium.com/the-prefect-blog/modular-data-stack-build-a-data-platform-with-prefect-dbt-and-snowflake-9e8ef6a56503
 
 This git repo was just a proof of concept of using Prefect instead of Airflow as a workflow orchestration tool.
 
