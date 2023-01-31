@@ -19,9 +19,9 @@ This workspace has all the Prefect Blocks correctly set up. Think of Prefect Blo
 The instructions below are for macOS:
 
 https://docs.prefect.io/getting-started/installation/
-Make sure you have python 3 installed
-pip install -U prefect
-prefect cloud login
+- Make sure you have python 3 installed
+- pip install -U prefect
+- prefect cloud login
 
 Clone this git repo and cd to the cloned repo directory. For example:
 
@@ -52,7 +52,7 @@ https://medium.com/the-prefect-blog/how-to-use-kubernetes-with-prefect-419b2e8b8
 - Add block files for connections, variables, secrets, etc.: https://docs.prefect.io/concepts/blocks/
 	- only need to do once, can do from UI
 	- https://medium.com/the-prefect-blog/modular-data-stack-build-a-data-platform-with-prefect-dbt-and-snowflake-part-3-7c325a8b63dc
-- Create a Prefect yaml file on https://github.com/Greenstand/treetracker-infrastructure to automatically deploy dev and prod Prefect agents and work queues on Greenstand's dev and prod Kubernetes clusters https://discourse.prefect.io/t/deploying-prefect-agents-on-kubernetes/1298
+- Create a Prefect yaml file on https://github.com/Greenstand/treetracker-infrastructure to automatically deploy dev and prod Prefect agents, work queues, and web UIs on Greenstand's dev and prod Kubernetes clusters https://discourse.prefect.io/t/deploying-prefect-agents-on-kubernetes/1298
 - Add prod workspace in Prefect Cloud, and dev / prod switches to deployment.py
 
 Airflow vs Prefect:
