@@ -42,17 +42,26 @@ This git repo was just a proof of concept of using Prefect instead of Airflow as
 
 Further things to do if we were serious about upgrading from Airflow to Prefect for Greenstand:
 
+- Install Prefect on Greenstand's dev and prod Kubernetes clusters using Ansible and the Prefect Helm chart: https://github.com/PrefectHQ/prefect-helm Similar to this: https://github.com/Greenstand/treetracker-infrastructure/tree/master/airflow
+  - Prefect agents, work queues, etc. will be on deployed to k8s pods, see https://discourse.prefect.io/t/deploying-prefect-agents-on-kubernetes/1298
+  - Also see: https://medium.com/the-prefect-blog/prefect-2-4-1-adds-k8s-agent-manifest-improved-helm-charts-notifications-firebolt-integration-5eec23f6f0ae
 - https://medium.com/the-prefect-blog/how-to-use-kubernetes-with-prefect-419b2e8b8cb2
     - Create a Kubernetes deployment using Greenstand's Digital Ocean k8s (dev / prod) for Prefect agent, work queue. Prefect agents are like Airflow schedulers. Prefect work queues are like Airflow worker pods.
 	    - Set the initial deployment schedules in the deployment.py file
     - Add S3 storage for logs of flow runs
-- Create a Prefect yaml file on https://github.com/Greenstand/treetracker-infrastructure to automatically deploy dev and prod Prefect agents, work queues, and web UIs on Greenstand's dev and prod Kubernetes clusters https://discourse.prefect.io/t/deploying-prefect-agents-on-kubernetes/1298
 - Add block files for connections, variables, secrets, etc.: https://docs.prefect.io/concepts/blocks/
 	- only need to do once, can do from UI
 	- https://medium.com/the-prefect-blog/modular-data-stack-build-a-data-platform-with-prefect-dbt-and-snowflake-part-3-7c325a8b63dc
 - Add prod workspace in Prefect Cloud, and dev / prod switches to deployment.py
 
+Notes:
+- Differences between self hosted Prefect UI (Prefect Orion server) and managed Prefect UI (Prefect Cloud): https://docs.prefect.io/ui/cloud/
+	- Prefect Cloud has user accounts, workspaces, automations, organizations, RBAC, etc.
+	- Also see: https://medium.com/the-prefect-blog/how-to-self-host-prefect-orion-with-postgres-using-docker-compose-631c41ab8a9f
+- Prefect can run scripts through shell commmands: https://discourse.prefect.io/t/prefect-collection-to-run-shell-commands-in-your-flows-prefect-shell/874
+
+
 Airflow vs Prefect:
 - Airflow is very customizable and powerful, at the expense of a lot of boilerplate code
 - Prefect is the second generation of workflow orchestration tools, and it shows. DAGs are optional - flows can be triggered by API calls, etc. The Prefect UI is a lot cleaner than the Airflow UI. Prefects components are cloud native, modular, and composable. Everything is modularized according to well thought through boundaries in Prefect. Switching from dev to prod environments is super easy in Prefect, whereas in Airflow it's very clunky. In general, Prefect is much easier to use and easier to learn than Airflow.
-- If I was starting from scratch, I'd use Prefect instead of Airflow. However, since Greenstand already has a lot invested in its Airflow infrastructure, the benefits of Prefect are not enough to warrant a swtich from Airflow to Prefect for Greenstand.
+- If I was starting from scratch, I'd use Prefect instead of Airflow. However, since Greenstand already has a lot invested in its Airflow infrastructure, the benefits of Prefect are not enough to warrant a swtich from Airflow to Prefect for Greenstand. Greenstand is also not willing to pay for Prefect Cloud.
