@@ -14,6 +14,8 @@ and get invited to the treetracker-prefect-dev Workspace
 
 This workspace has all the Prefect Blocks correctly set up. Think of Prefect Blocks as Airflow Variables and Operators combined into one. For the above workspace, the Airflow Variables from Greenstand's dev Airflow have been ported over to Prefect. A Slack Webhook block has also been set up so that notifications of data pipeline completion can be sent to a Slack channel.
 
+![alt text](https://github.com/huang-pan/treetracker-prefect/blob/master/prefect%20blocks.png?raw=true)
+
 
 The instructions below are for macOS:
 
@@ -34,6 +36,8 @@ The below instructions are for a local deployment. Your computer is used to run 
 - python flows/map/assign_tree_to_cluster.py
 
 You can also play around with the flow and deployment from the Prefect Cloud UI and compare it with the Airflow webserver UI. You can also schedule flow runs from the Prefect Cloud UI.
+
+![alt text](https://github.com/huang-pan/treetracker-prefect/blob/master/prefect%20flow%20runs.png?raw=true)
 
 
 The structure of this git repo is copied from: https://github.com/anna-geller/prefect-dataplatform: an excellent example of how you would use Prefect, dbt, and Snowflake: https://medium.com/the-prefect-blog/modular-data-stack-build-a-data-platform-with-prefect-dbt-and-snowflake-9e8ef6a56503
