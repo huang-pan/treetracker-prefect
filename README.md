@@ -42,7 +42,7 @@ This git repo was just a proof of concept of using Prefect instead of Airflow as
 
 Further things to do if we were serious about upgrading from Airflow to Prefect for Greenstand:
 
-- Install Prefect on Greenstand's dev and prod Kubernetes clusters using Ansible and the Prefect Helm chart: https://github.com/PrefectHQ/prefect-helm Similar to this: https://github.com/Greenstand/treetracker-infrastructure/tree/master/airflow
+- Install Prefect on Greenstand's dev and prod Kubernetes clusters using Ansible and the Prefect Helm chart: https://github.com/PrefectHQ/prefect-helm similar to this: https://github.com/Greenstand/treetracker-infrastructure/tree/master/airflow
   - Prefect agents, work queues, etc. will be on deployed to k8s pods, see https://discourse.prefect.io/t/deploying-prefect-agents-on-kubernetes/1298
   - Also see: https://medium.com/the-prefect-blog/prefect-2-4-1-adds-k8s-agent-manifest-improved-helm-charts-notifications-firebolt-integration-5eec23f6f0ae
 - https://medium.com/the-prefect-blog/how-to-use-kubernetes-with-prefect-419b2e8b8cb2
