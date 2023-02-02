@@ -66,8 +66,9 @@ Notes:
 - Prefect can also run Flows on Docker images provisioned to Kubernetes: 
   - Create Docker image and then run Flow code using Docker image: https://medium.com/the-prefect-blog/how-to-use-kubernetes-with-prefect-part-2-2e98cdb91c7e
   - Run flow code baked into Docker image: https://medium.com/the-prefect-blog/how-to-use-kubernetes-with-prefect-part-3-e2223ce34ba7
-  - This method replicates what the Airflow KubernetesPodOperator does: 
+  - This method replicates what the Airflow KubernetesPodOperator does:
   	- https://airflow.apache.org/docs/apache-airflow-providers-cncf-kubernetes/stable/operators.html
+  - You can use it in conjunction with running shell scripts from python to replicate the DAG below in Prefect:
 	- https://github.com/Greenstand/treetracker-airflow-dags/blob/main/migrate_stakeholders_dag.py
 	- https://github.com/Kpoke/domain-migration-scripts/tree/fix/migration/v1Tov2Migrations
 
