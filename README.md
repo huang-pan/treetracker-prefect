@@ -63,6 +63,13 @@ Notes:
 	- Prefect Cloud has user accounts, workspaces, automations, organizations, RBAC, etc.
 	- Also see: https://medium.com/the-prefect-blog/how-to-self-host-prefect-orion-with-postgres-using-docker-compose-631c41ab8a9f
 - Prefect can run scripts through shell commmands: https://discourse.prefect.io/t/prefect-collection-to-run-shell-commands-in-your-flows-prefect-shell/874
+- Prefect can also run Flows on Docker images provisioned to Kubernetes: 
+  - Create Docker image and then run Flow code using Docker image: https://medium.com/the-prefect-blog/how-to-use-kubernetes-with-prefect-part-2-2e98cdb91c7e
+  - Run flow code baked into Docker image: https://medium.com/the-prefect-blog/how-to-use-kubernetes-with-prefect-part-3-e2223ce34ba7
+  - This method replicates what the Airflow KubernetesPodOperator does: 
+  	- https://airflow.apache.org/docs/apache-airflow-providers-cncf-kubernetes/stable/operators.html
+	- https://github.com/Greenstand/treetracker-airflow-dags/blob/main/migrate_stakeholders_dag.py
+	- https://github.com/Kpoke/domain-migration-scripts/tree/fix/migration/v1Tov2Migrations
 
 
 Airflow vs Prefect:
