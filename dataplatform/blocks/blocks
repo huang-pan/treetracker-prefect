@@ -1,0 +1,12 @@
+author-creation-disable-organization-filter 	True
+* ckan-api-key 	270a5f9e-9319-4f5a-983c-1fa50087fa2d	
+ckan-dataset-name 	capture-data	
+ckan-dataset-name-earning-data 	monthly-earning-data
+ckan-dataset-name-grower-data 	grower-data
+ckan-domain 	https://dev-ckan.treetracker.org
+* database-url 	postgresql://doadmin:l5al4hwte8qmj6x8@db-postgresql-sfo2-nextgen-do-user-1067699-0.db.ondigitalocean.com:25060/treetracker?sslmode=no-verify
+ftp-host 	156.67.236.37
+* ftp-password 	w2dKF7EC3Lxj7uCj
+ftp-ppp 	aIsyo6;5r$jllh
+ftp-user 	p366052f4
+k8s-domain 	dev-k8s.treetracker.org
